@@ -33,9 +33,8 @@
 	}
 
 	.kdContainer {
-		background-image: url(bg_v.png);
-			background-repeat: no-repeat;
-			background-size: 100% 120%;
+		background: linear-gradient(120deg, #4159d6,#585dd9,#6b62dc);
+		/*background-size: 100% 120%;*/
 		}
 
 	.kdContainer .logokd {
@@ -54,17 +53,17 @@
 	.kdContainer-title {
 		font-size:22px;
 		font-weight: 700;
-		line-height: 1.1em;
+		line-height: 1.05em;
 		color: #fff;
 		position: relative;	
 		z-index: 1;
 
 	}
-	.kdContainer-title p {padding:20px 20px 10px 20px; margin: 0;}
+	.kdContainer-title p {padding:20px 20px 7px 20px; margin: 0;}
 
 	.kdContainer-list {
-		font-size:15px;
-		line-height: 16px;
+		font-size:14px;
+		line-height: 14px;
 		padding:0;
 		margin:0 20px;
 		list-style:none;
@@ -86,7 +85,7 @@
 		transform: scale(1);
 		transition:transform 0.3s ease-in-out;		
 	}
-	.kdContainer-list-item label {cursor:pointer; display:block; padding: 10px 10px}
+	.kdContainer-list-item label {cursor:pointer; display:block; padding: 8px 10px}
 	.kdContainer-list input {
 		display: none;
 	}
@@ -107,7 +106,7 @@
     box-sizing: border-box;
     margin-right: 10px;
     left: 0;
-		pointer-events: none;
+    pointer-events: none;
 	}
 
 	
@@ -135,7 +134,7 @@
 
 	}
 	.kdContainer-btn {
-		color:#fd5d5d;
+		color:#6b62dc;
 		border-radius: 5px;
 		font-family: "Inter", sans-serif;
 		margin: 0;
@@ -220,9 +219,10 @@
 		if(event.target.tagName.toLowerCase() == "li") {
 			clickedItem = event.target;
 		}
-		if(event.target.tagName.toLowerCase() == "label") {
+		else if(event.target.tagName.toLowerCase() == "label") {
 			clickedItem = event.target.parentNode;
 		}
+
 		
 		setTimeout(function() {
 
@@ -284,6 +284,7 @@
                         <li class="kdContainer-list-item"><label><input type="checkbox" name="Яндекс.Лавка" value="Яндекс.Лавка" /><div class="kdChek"></div>Яндекс.Лавка</label></li>
                         <li class="kdContainer-list-item"><label><input type="checkbox" name="Озон Фреш" value="Озон Фреш" /><div class="kdChek"></div>Озон Фреш</label></li>
                         <li class="kdContainer-list-item"><label><input type="checkbox" name="Самокат" value="Самокат" /><div class="kdChek"></div>Самокат</label></li>
+                        <li class="kdContainer-list-item"><label><input type="checkbox" name="X5 Доставка" value="x5staff" /><div class="kdChek"></div>X5 Доставка</label></li>
                         <li class="kdContainer-list-item allno"><label><input type="checkbox" name="none" value="none" /><div class="kdChek"></div>Затрудняюсь ответить</label></li>
 
                     </ul>
@@ -302,4 +303,3 @@
          </div>
     </body>
 </html>
-
